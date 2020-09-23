@@ -15,6 +15,27 @@ body {
     background-color: #0B1D26;
 }
 
+.one {
+
+    background-image: url("./Pics/one.png");
+    background-position: top left; 
+    background-repeat: no-repeat;
+}
+
+.two {
+
+    background-image: url("./Pics/two.png");
+    background-position: top right; 
+    background-repeat: no-repeat;
+}
+
+.three {
+
+    background-image: url("./Pics/three.png");
+    background-position: top left; 
+    background-repeat: no-repeat;
+}
+
 nav {
     width: 33%;
 }
@@ -39,6 +60,7 @@ div.fixed {
     position: fixed;
     top: 359px;
     left: 0px;
+    z-index: 10;
 }
 
 div.social {
@@ -52,16 +74,16 @@ div.slider {
     width: 240px;
 }
 
-#start {
+.start {
     max-width: 1920px;
     width: 100%;
     position: relative;
     top: 199px;
 }
 
-#start > div {
+.start > div {
     max-width: 950px;
-    width: 80%;
+    width: 75%;
     margin: 50px auto;
 }
 
@@ -106,28 +128,35 @@ main {
     margin: 0 auto;
 }
 
-.content {
-    display: block;
-    max-width: 1462px;
-    width: 75%;
-    height: 720px;
-    margin: 100px 0;
+main > div {
+    display: flex;
+    height: 100%;
+    margin: 200px 0;
 }
 
+a.content {
+    min-width: 160px;
+    max-width: 632px;
+    width: 80%;
+    display: block;
+    margin: auto 10%;
+}
 
 
 .left {
-    display: inline-block;
-    width: 45%;
+    display:inline-flex;
+    width: 49%;
 }
 
 .right {
-    display: inline-block;
-    width: 45%;
+    display: inline-flex;
+    width: 49%;
 }
 
-.contentPicture {
+div.left > div> img,
+div.right > div > img {
     width: 100%;
+    min-width: 60px;
 }
 
 .vertical {
@@ -180,21 +209,4 @@ footer {
 
 .moreOnMNTN {
     grid-column: 4;
-}
-
-footer > div {
-    margin: 0;
-}
-
-footer > div> ul {
-    margin: 0;
-}
-
-
-@media screen and (max-width: 320px){
-    *{
-        color: white;
-        background-color: white;
-        background-image: none;
-    }
 }
