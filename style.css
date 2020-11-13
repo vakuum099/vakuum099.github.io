@@ -19,8 +19,8 @@ body {
 
 li, a { font-size: inherit;}
 
-ul,
-div.fixed {
+ul
+ {
     list-style-type: none;
     display: grid;
     justify-content: space-around;
@@ -33,17 +33,25 @@ nav>ul {
     grid: auto /auto auto auto auto auto;
 }
 
-div.fixed {
-    width: 100vw;
+div.slider,
+div.social {
+    height: 1.5rem;
     position: fixed;
     bottom: 0rem;
     background-color: #0B1D26;
     display: grid;
-    grid-template-areas: "slider social";
 }
 
-div.social {grid-area: social;}
-div.slider {grid-area: slider;}
+div.slider {
+    left: 0rem;
+    width: 60vw;
+}
+
+div.social {
+    right: 0rem;
+    width: 40vw;
+    justify-content: space-around;
+}
 
 div.social>ul { grid-template-areas: "twitter instagram"; }
 div.slider>ul { grid-template-areas: "atstart one two three"; }
@@ -101,10 +109,6 @@ h3 {
     display: inline;
 }
 
-div.start {
-    margin-top: 0.25vw;
-}
-
 p.readMore {
     color: #FBD784;
     display: inline;
@@ -140,10 +144,10 @@ div>p {
 
     #start {
         width: 70%;
-
-        margin: 20vw auto 0 auto;
+        margin: 7rem auto 0 auto;
     }
 
+    /*unhide */
     a.account>span,
     div.social>ul>li:nth-child(1) {
         display: inline;
@@ -165,7 +169,7 @@ div>p {
     .three {
         background-image: url("./pics/three.png");
     }
-    
+ /*   
     div.fixed {
         display: unset;
         background: none;
@@ -174,24 +178,29 @@ div>p {
         top: 20vw;
         left: 0rem;
     }
-    
-    div.social {
-        margin-left: 1rem;
-        width: 11rem;
+*/
+    div.social,
+    div.slider {
+        background: unset;
+        bottom: unset;
+        margin: 0rem 1rem;
+        width: 2rem;
+        top: 20vw;
     }
     
+    div.social {
+        left: 0rem;
+    }
+
     div.slider {
-        float: right;
-        width: 15rem;
+
+        left:unset;
+        right: 0rem;
     }
     
     .start > div {
         width: 75%;
         margin: 3rem auto;
-    }
-    
-    ul {
-        list-style-type: none;
     }
     
     div.logo > span {
@@ -203,7 +212,6 @@ div>p {
     }
     
     main {
-
         width: 76%;
         margin-left: auto;
         margin-right: auto;
@@ -247,12 +255,12 @@ div>p {
     }
 
     div.slider > ul > li {
-        padding: 0% 15% 10% 0;
-        text-align: right;
-        margin-right: 10px;
+        padding-top: 0.5rem;
+        vertical-align: middle;
+        float: right;
         border-top-style: none;
         border-right-style: solid;
-        border-right-width: 3px;
+        border-right-width: 0.2rem;
     }
     
     div.social > ul > li { margin: 25% 0 15% 15%;}
