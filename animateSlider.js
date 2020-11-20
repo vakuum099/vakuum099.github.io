@@ -1,20 +1,19 @@
 "use strict"
 
-let element;
-let ratioStart;
-let ratioOne;
-let ratioTwo;
-let ratioThree;
+let elementsRatio = {
+    start: 0,
+    one: 0,
+    two:0,
+    three:0
+};
 
 window.addEventListener("load", () => {
-
-    element = {
+    let element = {
         start: document.querySelector("#start"),
         one: document.querySelector("#one"),
         two: document.querySelector("#two"),
         three: document.querySelector("#three")
-    }
-    
+    };
     createObserver(element);
 }, false)
 
@@ -23,7 +22,7 @@ function createObserver(element) {
     let options = {
         root: null,
         rootMargin: "0px",
-        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+        threshold: [0, 0.5, 1]
     }
 
     observer = new IntersectionObserver(handleIntersect, options);
@@ -33,53 +32,40 @@ function createObserver(element) {
     }
 }
 
-function handleIntersect(entries, observer) {
+function handleIntersect(entries) {
+    let sliderElements = {
+        start: document.querySelector(".slider ul>li:nth-child(1)"),
+        one: document.querySelector(".slider ul>li:nth-child(2)"),
+        two: document.querySelector(".slider ul>li:nth-child(3)"),
+        three: document.querySelector(".slider ul>li:nth-child(4)")
+    };
+    entries.forEach(entry => elementsRatio[entry.target.id] = entry.intersectionRatio);
+    let maxRatio = nameForMax(elementsRatio);
 
-    
-    let sliderStart = document.querySelector(".slider ul>li:nth-child(1)");
-    let sliderOne = document.querySelector(".slider ul>li:nth-child(2)");
-    let sliderTwo = document.querySelector(".slider ul>li:nth-child(3)");
-    let sliderThree = document.querySelector(".slider ul>li:nth-child(4)");
+    if (sliderElements[maxRatio].className !== "sliderBorder active"){
+    classReset(sliderElements);
+    setActive(sliderElements[maxRatio]);
+    };
+}
 
-    entries.forEach(entry => {
-        if (entry.target.id == "start"){
-            ratioStart = entry.intersectionRatio;
-        } else if (entry.target.id == "one") {
-            ratioOne = entry.intersectionRatio;
-        } else if (entry.target.id == "two") {
-            ratioTwo = entry.intersectionRatio;
-        } else if (entry.target.id == "three"){
-            ratioThree = entry.intersectionRatio;
-        }
-    });
-
-    if (ratioStart > 0 && ratioStart >= ratioOne) {
-        if (sliderStart.className !== "sliderBorder active"){
-            [sliderOne, sliderTwo, sliderThree].forEach(el => classReset(el));
-            setActive(sliderStart);
-        }
-    } else if (ratioOne > 0 && ratioOne >= ratioTwo) {
-        if (sliderOne.className !== "sliderBorder active"){
-            [sliderStart, sliderTwo, sliderThree].forEach(el => classReset(el));
-            setActive(sliderOne);
-        }
-    } else if (ratioTwo > 0 && ratioTwo >= ratioThree) {
-        if (sliderTwo.className !== "sliderBorder active"){
-            [sliderStart, sliderOne, sliderThree].forEach(el => classReset(el));
-            setActive(sliderTwo);
-        }
-    } else if (ratioThree > ratioTwo) {
-        if (sliderThree.className !== "sliderBorder active"){
-            [sliderStart, sliderOne, sliderTwo].forEach(el => classReset(el));
-            setActive(sliderThree);
-        }
+function classReset(sliderElements) {
+    for (let el in sliderElements){
+        sliderElements[el].className = "sliderBorder";
     }
-
 }
 
-function classReset(element) {
-    element.className = "sliderBorder";
-}
 function setActive(element) {
     element.className = "sliderBorder active";
+}
+
+function nameForMax(data) {
+    let max = 0;
+    let name;
+    for (let el in data) {
+        if (data[el] >= max) {
+            max = data[el];
+            name = el;
+        }
+    }
+    return name;
 }
