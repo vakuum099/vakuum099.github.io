@@ -22,7 +22,7 @@ body {
     background-repeat: no-repeat, no-repeat;
     background-clip: border-box, border-box;
     background-color: #0B1D26;
-    width: 100vw;
+    /*width: 100vw;*/
 }
 
 h1,h2,h3,p {margin: 1rem 0;}
@@ -264,7 +264,7 @@ div>p {
     
     footer>div>ul>:nth-child(1) { font-size: 1.5rem; }
     main a { font-size: 1.125rem; }
-    .account { font-size: 1.07; }
+    .account { font-size: 1.07rem; }
     .logo {
         font-size: 2rem;
         font-weight: bold;
