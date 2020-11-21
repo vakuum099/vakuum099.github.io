@@ -1,0 +1,409 @@
+html {
+    font-size: 70%;
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    color: #FFFFFF;
+    font-family: 'Gilroy', 'Kanit', sans-serif;
+    font-weight: 600;
+    font-weight: 500;
+    text-decoration-line: none;
+}
+
+
+body {
+    background-image: radial-gradient( transparent 0%, #0B1D26 90% ),
+    linear-gradient( transparent 0%, #0B1D26 10% ),
+    url("./pics/MNTN800.jpg");
+    background-size:  100vw 100vh, 100vw 200vh, contain;
+    background-position-y: 0vh, 40vh, 1.1rem;
+    background-repeat: no-repeat, no-repeat;
+    background-clip: border-box, border-box;
+    background-color: #0B1D26;
+    /*width: 100vw;*/
+}
+
+h1,h2,h3,p {margin: 1rem 0;}
+
+h1, h2 {
+    font-family: 'Chronicle Dispaly', 'Playfair Display', serif;
+}
+
+img[src="./pics/rectangle.svg"] {
+    vertical-align: 0.3em;
+    width: 3rem;
+    margin-right: 0.7em;
+}
+
+h3 {
+    letter-spacing: 0.25rem;
+}
+
+li { font-size: inherit;}
+
+a>h3{
+    letter-spacing: unset;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    justify-content: space-around;
+    column-gap: 2rem;
+}
+
+footer>div>ul { display: block;}
+
+nav,
+div.slider,
+div.social {
+    position: fixed;
+    height: 1.5rem;
+    background-color: #0B1D26;
+    background-color: rgba(11, 29, 38, 0.7);
+}
+
+nav {
+    width: 100vw;
+    padding-top: 0.5rem;
+    top: 0rem;
+}
+
+nav>ul {
+    grid: auto /1fr 1fr 1fr 1fr 1fr;
+}
+
+li.account {
+    justify-self: end;
+}
+
+
+div.slider,
+div.social {
+    padding-bottom: 0.5rem;
+    bottom: 0rem;
+    display: grid;
+}
+
+div.social {
+    right: 0rem;
+    width: 40vw;
+    justify-content: space-around;
+}
+
+div.slider {
+    left: 0rem;
+    width: 60vw;
+}
+
+div.social>ul { grid-template-areas: "twitter instagram"; }
+div.slider>ul { grid-template-areas: "atstart one two three"; }
+
+div.social>ul>li:nth-child(2) {grid-area: instagram;}
+div.social>ul>li:nth-child(3) {grid-area: twitter; align-self: center;}
+div.slider>ul>li:nth-child(1) {grid-area: atstart;}
+div.slider>ul>li:nth-child(2) {grid-area: one;}
+div.slider>ul>li:nth-child(3) {grid-area: two;}
+div.slider>ul>li:nth-child(4) {grid-area: three;}
+
+li.account span,
+div.social>ul>li:nth-child(1) {
+    display: none;
+}
+
+#start {
+    width: 90vw;
+    margin: 10vh auto 0 auto;
+}
+
+#start>a>img {
+    margin-left: 0.5rem;
+    vertical-align: text-bottom;
+}
+
+li.sliderBorder {
+    display: inline-block;
+    border-top-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-top-width: 0.25rem;
+}
+
+li.active {
+    border-top-style: solid;
+    border-top-color: inherit;
+    border-top-width: 3px;
+}
+
+main { 
+    margin-top: 50vw;
+    margin-bottom: 20vw;
+}
+
+#start>a>img,
+li.account img,
+img[alt="on instagram"],
+img[alt="on twitter"],
+img[src="./pics/arrowRight.svg"] {
+    height: 1.2em;
+}
+
+li.account img {
+    margin-right: 0.5rem;
+    vertical-align: text-top;
+}
+
+main>div,
+footer {
+    margin: 0.5rem;
+}
+
+#more {
+    margin-left: auto;
+    width: 8rem
+}
+
+main>div>img {
+    width: 100%;
+}
+    
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: start;
+    max-width: 80%;
+}
+
+h2 { font-size: 2rem;}
+
+h3 {
+    color: #FBD784;
+    display: inline;
+}
+
+main h3 {
+    font-weight: 800;
+}
+
+p.readMore {
+    color: #FBD784;
+    display: inline-block;
+}
+
+footer {
+    position: initial;
+    margin-bottom: 3rem;
+    display: grid;
+    row-gap: 0.5rem;
+    grid: auto / 2fr 1fr 1fr;
+    gap: 0;
+}
+
+li>a>p,
+div>p {
+    font-size: 0.75rem;
+}
+
+#copyright {
+    -webkit-text-stroke-color: #0000007e;
+    -webkit-text-stroke-width: 1px;
+}
+
+#copyright p {
+    margin: auto 0 0 0;
+    font-weight: 500;
+    
+}
+
+@media only screen and (min-width: 800px) {
+    
+    html {
+        font-size: unset;
+    }
+    * {
+        font-weight: 700;
+    }
+
+
+    body {
+        background-image: radial-gradient( transparent 0%, #0B1D26 95% ),
+        linear-gradient( transparent 0%, #0B1D26 30% ),
+        url("./pics/MNTN1920.jpg");
+        background-size:  100vw 150vh, 100vw 150vh, contain;
+        background-position-y: 0rem, 50vh, 0rem;
+    }
+
+    header {
+        margin-top: 5rem;
+    }
+
+    nav {
+        position: unset;
+        width: unset;
+        height: unset;
+        padding-top: unset;
+        background-color: unset;
+        margin: 0 3rem;
+    }
+    ul {
+        justify-content: space-between;
+    }
+
+    nav>ul {
+        grid: auto /3fr 1fr 1fr 1fr 3fr;
+    }
+
+    #start {
+        width: 65%;
+        margin: 14rem auto 0 auto;
+    }
+
+    h1 { font-size: 5.5rem; }
+    h2 { font-size: 4rem; }
+    
+    footer>div>ul>:nth-child(1) { font-size: 1.5rem; }
+    main a { font-size: 1.125rem; }
+    .account { font-size: 1.07rem; }
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+
+
+    /*unhide */
+    li.account span,
+    div.social>ul>li:nth-child(1) {
+        display: inline;
+    }
+
+
+    div.social,
+    div.slider {
+        background: unset;
+        bottom: unset;
+        width: 2rem;
+        top: 40vh;
+    }
+    
+    div.social {
+        left: 2rem;
+    }
+
+    div.slider {
+
+        left:initial;
+        right: 5rem;
+    }
+
+    div.slider > ul>li {
+        padding: 1rem;
+    }
+    
+    .start > div {
+        width: 50%;
+        margin: 3rem auto;
+    }
+    
+    div.logo > span {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    
+    main,
+    footer {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main>div {
+        margin: 10rem 0;
+        display: grid;
+        grid: auto / 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #one { grid-template-areas: "text01 text01 text01 photo01 photo01 " ; }
+    #two { grid-template-areas: "photo02 photo02 text02 text02 text02" ; }
+    #three { grid-template-areas: "text03 text03 text03 photo03 photo03" ; }
+
+    #one>img { grid-area: photo01;}
+    #two>img { grid-area: photo02;}
+    #three>img {grid-area: photo03;}
+
+    #one>a,
+    #two>a,
+    #three>a {
+        width: 72%;
+        padding: 4rem;
+        margin: auto;
+        background-repeat: no-repeat;
+    }
+
+    #two>a {
+        padding-right: 0rem;
+        padding-left: 4rem;
+        margin: auto 0 auto auto;
+    }
+
+    #one>a {
+        grid-area: text01;
+        background-image: url("./pics/one.png");
+    }
+
+    #two>a {
+        grid-area: text02;
+        background-image: url("./pics/two.png");
+    }
+    #three>a{
+        grid-area: text03;
+        background-image: url("./pics/three.png");
+    }
+
+    .vertical {
+        writing-mode: vertical-rl;
+    }
+    
+    div.social>ul,
+    div.slider>ul {
+        display: initial;
+    }
+
+    div.slider > ul > li {
+        padding-top: 0.5rem;
+        vertical-align: middle;
+        float: right;
+        border-top-style: none;
+        border-right-style: solid;
+        border-right-width: 0.2rem;
+    }
+    
+    div.social > ul > li { margin: 25% 0 15% 15%;}
+    li.sliderBorder { border-right-color: rgba(255, 255, 255, 0.5);}
+    li.active { border-right-color: inherit; }
+
+    footer {
+        grid: auto/3fr 1fr 1fr;
+    }
+
+    footer a>p {
+        font-weight: 500;
+    }
+
+}
+
+@media only screen and (min-width: 3840px) {
+    html {
+        font-size: 200%;
+    }
+
+    body {
+        background-image: radial-gradient( transparent 0%, #0B1D26 95% ),
+        linear-gradient( transparent 0%, #0B1D26 50% ),
+        url("./pics/MNTN3840.jpg");
+        background-size:  100vw 150vh, 100vw 200vh, contain;
+        background-position-y: 0rem, 50vh, 0rem;
+    }
+}
