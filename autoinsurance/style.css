@@ -40,14 +40,14 @@ a>span {
 h1 {
     
     font-size: 2rem;
-    margin: 6rem 0rem 4rem 0rem;
+    margin: 4rem 0rem;
     text-align: center;
 }
 
 img {
     width: 100%;
     display: block;
-    margin: 0rem auto 2rem auto;
+    margin: 1rem auto;
     box-shadow: 8px 8px 20px #333333;
     
 }
@@ -216,8 +216,12 @@ button.howtofind.active {
     article {
         margin: 0rem 15%;
         grid-area: article;
-        overflow-y: scroll;
+
         scrollbar-color:  #6483C6 #eeeeee;
+    }
+
+    .scroll {
+        overflow-y: scroll;
     }
 
 
@@ -226,7 +230,7 @@ button.howtofind.active {
         margin: 6rem 0rem;
         padding: 10% 20%;
         border-right: 2px solid #c4c4c4;
-        border-left: none;
+        border-top: none;
         box-shadow: 10px 0px 6px -7px #c4c4c4,
                     -5px 0px 6px -6px #c4c4c4 inset;
     }
