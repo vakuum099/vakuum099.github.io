@@ -14,15 +14,22 @@ let buttonToMap = {
     "button1": 1,
     "button2": 2,
     "button3": 3,
-    "button5": 4,
-    "button6": 5
+    "button4": 4,
+    "button5": 5
 };
 
 let currentPicture = 0;
+let picture;
+let pictureButtons;
 
-let picture = document.querySelector("img");
 
-window.addEventListener(onload, setInterval(nextPicture, 3000), false);
+window.addEventListener('load', () => {
+    picture = document.querySelector("img");
+    pictureButtons = document.querySelectorAll(".howtofind > button");
+    pictureButtons.forEach(el => el.addEventListener('click', handleClick, false));
+    setInterval(nextPicture, 3000);
+
+}, false);
 
 function nextPicture() {
     if (currentPicture < images.length - 1) {
@@ -36,4 +43,12 @@ function nextPicture() {
 function changePicture (i) {
     picture.src = images[i][0];
     picture.alt = images[i][1];
+    pictureButtons.forEach(el => el.className = null);
+    pictureButtons[i].className = "active";
+}
+
+function handleClick(e) {
+    let targetIndex = buttonToMap[e.target.id];
+    changePicture(targetIndex);
+    currentPicture = targetIndex;
 }

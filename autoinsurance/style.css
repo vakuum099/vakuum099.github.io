@@ -3,11 +3,23 @@
     font-family: 'Roboto', sans-serif;
     background-color: #eeeeee;
     text-decoration: none;
-    border: none;    
+    border: none;
+    font-weight: 400;
 }
 
 body {
     margin: 0px;
+}
+
+blockquote {
+    padding-left: 1rem;
+    margin-left: 1.5rem;
+    border-left: 3px solid#6483C6;
+}
+
+    
+main > address{
+    margin-top: 2rem;
 }
 
 footer {
@@ -18,18 +30,18 @@ footer {
     box-shadow: 0px -5px 5px #eeeeee;
 }
 
-address {
+footer > address {
     display: flex;
     justify-content: space-between;
     background-color: #eeeeee;
 }
 
 
-address a {
+footer > address a {
     color: #6483C6;
 }
 
-address a:hover {
+footer > address a:hover {
     color: #333333;
 }
 
@@ -40,7 +52,7 @@ a>span {
 h1 {
     
     font-size: 2rem;
-    margin: 4rem 0rem;
+    margin: 1.5rem 0rem;
     text-align: center;
 }
 
@@ -48,7 +60,7 @@ img {
     width: 100%;
     display: block;
     margin: 1rem auto;
-    box-shadow: 8px 8px 20px #333333;
+    /*box-shadow: 8px 8px 20px #333333;*/
     
 }
 
@@ -93,12 +105,9 @@ div:hover div {
 
 
 aside {
-
-
-    border-top: 2px solid #c4c4c4;
-
+    /*border-top: 2px solid #c4c4c4;
     box-shadow: 0px -10px 6px -7px #c4c4c4,
-                0px 5px 6px -6px #c4c4c4 inset;
+                0px 5px 6px -6px #c4c4c4 inset;*/
 }
 
 aside>p {
@@ -106,7 +115,7 @@ aside>p {
 }
 
 
-button.howtofind {
+.howtofind > button {
     padding: 0;
     margin: 0;
     width: 16px;
@@ -121,11 +130,11 @@ div.howtofind {
     text-align: center;
 }
 
-button.howtofind:hover {
+.howtofind > button:hover {
     background-color: #eeeeee;
 }
 
-button.howtofind.active {
+.howtofind button.active {
     box-shadow: 4px 4px 6px #c4c4c4;
 }
 
@@ -138,7 +147,7 @@ button.howtofind.active {
         text-align: center;
     }
 
-    blockquote, p, a, button {
+    blockquote, p, a, button, address {
         font-size: 2rem;
         line-height: 2em;
     }
@@ -224,8 +233,12 @@ button.howtofind.active {
         overflow-y: scroll;
     }
 
+    main>address {
 
-    aside {
+    }
+
+    aside,
+    main>address {
         grid-area: quote;
         margin: 6rem 0rem;
         padding: 10% 20%;
@@ -235,21 +248,17 @@ button.howtofind.active {
                     -5px 0px 6px -6px #c4c4c4 inset;
     }
 
-    aside>p {
-        text-align: right;
-    }
-
-    address {
+    footer > address {
         display: grid;
         grid: auto / 2fr 3fr;
         justify-content: space-around;
     }
 
-    address a:hover {
+    footer > address a:hover {
         color: #333333;
     }
 
-    button.howtofind {
+    .howtofind > button {
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 50%;
@@ -262,11 +271,11 @@ button.howtofind.active {
         text-align: center;
     }
 
-    button.howtofind:hover {
+    .howtofind > button:hover {
         background-color: #eeeeee;
     }
 
-    button.howtofind.active {
+    .howtofind button.active {
         box-shadow: 4px 4px 10px #c4c4c4;
         border: 1px solid #c4c4c4;
     }
