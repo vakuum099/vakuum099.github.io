@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
     pictureButtons = document.querySelectorAll(".howtofind > button");
     pictureButtons.forEach(el => el.addEventListener('click', handleClick, false));
     changePicture(0);
-    setInterval(nextPicture, 4000);
+    setInterval(nextPicture, 2000);
 
 }, false);
 
@@ -52,7 +52,7 @@ function changePicture (i) {
     picture.alt = images[i][1];
     pictureButtons.forEach(el => el.className = null);
     pictureButtons[i/2].className = "active";
-    setTimeout( () =>picture.src = images[i+1][0], 1500)
+    setTimeout( () =>picture.src = images[i+1][0], 500)
 }
 
 function handleClick(e) {
