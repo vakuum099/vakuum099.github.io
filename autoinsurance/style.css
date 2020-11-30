@@ -36,7 +36,6 @@ footer > address {
     background-color: #eeeeee;
 }
 
-
 footer > address a {
     color: #6483C6;
 }
@@ -103,13 +102,6 @@ div:hover div {
     display: block;
 }
 
-
-aside {
-    /*border-top: 2px solid #c4c4c4;
-    box-shadow: 0px -10px 6px -7px #c4c4c4,
-                0px 5px 6px -6px #c4c4c4 inset;*/
-}
-
 aside>p {
     text-align: right;
 }
@@ -139,6 +131,10 @@ div.howtofind {
 }
 
 
+input, textarea {
+    background-color: #c4c4c4;
+}
+
 @media only screen and (min-width: 800px){
 
     h1 {
@@ -156,6 +152,10 @@ div.howtofind {
         margin: 1em 0rem;
     }
 
+    blockquote {
+        border-left: none;
+    }
+
     img {
         width: 75%;
         display: block;
@@ -167,17 +167,19 @@ div.howtofind {
 
     nav {
         display: grid;
-        grid: 2rem / 1fr 1fr 1fr 1fr 1fr;
+        grid: 4rem / 1fr 1fr 1fr 1fr;
         column-gap: 1rem;
         justify-content: space-between;
         margin-bottom: 2rem;
+        
     }
 
     nav>a, nav>div, button, div>a {
         background-color: #333333;
         box-shadow: 0px 4px 5px #333333;
-        font-size: 1rem;
+        font-size: 2rem;
         color: #eeeeee;
+        z-index: 10;
     }
 
     nav>div, button, div>a {
@@ -233,17 +235,14 @@ div.howtofind {
         overflow-y: scroll;
     }
 
-    main>address {
-
-    }
-
     aside,
-    main>address {
+    main>address,
+    main>form {
+        z-index: 1;
         grid-area: quote;
         margin: 6rem 0rem;
         padding: 10% 20%;
         border-right: 2px solid #c4c4c4;
-        border-top: none;
         box-shadow: 10px 0px 6px -7px #c4c4c4,
                     -5px 0px 6px -6px #c4c4c4 inset;
     }
@@ -279,6 +278,11 @@ div.howtofind {
         box-shadow: 4px 4px 10px #c4c4c4;
         border: 1px solid #c4c4c4;
     }
+
+    label {
+        font-size: 2rem;
+    }
+    
 
 }
 

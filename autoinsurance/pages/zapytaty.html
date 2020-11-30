@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Де застрахуватися у Харкові</title>
+    <title>Запитання про страховку у Харкові</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <nav>
@@ -28,24 +27,23 @@
     </nav>
     <main>
         <article>
-            <h1>Як нас знайти</h1>
-            <img src="../images/streetview1.jpg" alt="">
-            <div class="howtofind">
-                <button id="button0" type="button" class="active"></button>
-                <button id="button1" type="button" ></button>
-                <button id="button2" type="button" ></button>
-                <button id="button3" type="button" ></button>
-                <button id="button4" type="button" ></button>
-                <button id="button5" type="button" ></button>
-            </div>
-
+            <h1>Діалог</h1>
+            <p>Питання-відповіді. 
+                
+            </p>
         </article>
-
-        <address>
-            <p>Наша адреса:</p>
-            <p>проспект Героїв Сталінграду 169/1, м. Харків, Україна.</p>
-            
-        </address>
+        <form action="" method="post">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" name="name" id="" required>
+            <br>
+            <label for="email">Ваш імейл(не буде відображено на сайті)</label>
+            <input type="email" name="email" id="" required>
+            <br>
+            <label for="question">Ваше запитання:</label>
+            <textarea name="question" id="" cols="30" rows="10" required></textarea>
+            <br>
+            <button type="submit" class="active">Запитати</button>
+        </form>
     </main>
     <footer>
         <address>
@@ -53,7 +51,6 @@
             <a href="mailto: vakulenko@odo-msk.com.ua"><span>e-mail: </span> vakulenko@odo-msk.com.ua</a>
         </address>
     </footer>
-    <script src="carousel.js"></script>
     <script src="https://unpkg.com/mailgo@0.11.1/dist/mailgo.min.js"></script>
 </body>
 </html>
