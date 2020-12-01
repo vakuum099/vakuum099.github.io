@@ -63,26 +63,19 @@ img {
     
 }
 
-
-nav>a, nav>div, button, div>a {
-    background-color: #333333;
-    box-shadow: 0px 4px 5px #333333;
-    font-size: 1rem;
-    color: #eeeeee;
-}
-
 a {
     text-align: center;
 }
 
 .active,
 button.active {
-    background-color: #6483C6;
-    box-shadow: 0px 4px 5px #6483C6;
 }
+
 .active:hover {
     color: #333333;
 }
+
+
 
 nav>a:hover,
 button:hover,
@@ -108,16 +101,15 @@ aside>p {
 
 
 .howtofind > button {
-    padding: 0;
-    margin: 0;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     display: inline-flex;
     background-color: #c4c4c4;
-    margin: 0.5rem;
-    box-shadow: 4px 4px 10px #333333;
+    margin: 0.75rem;
+    box-shadow: 4px 4px 10px #3333337e;
 }
+
 div.howtofind {
     text-align: center;
 }
@@ -126,8 +118,9 @@ div.howtofind {
     background-color: #eeeeee;
 }
 
-.howtofind button.active {
-    box-shadow: 4px 4px 6px #c4c4c4;
+.press {
+    box-shadow: 2px 2px 3px #3333337e;
+    transform: translate(2px, 2px);
 }
 
 
@@ -260,30 +253,12 @@ input, textarea {
     .howtofind > button {
         width: 1.5rem;
         height: 1.5rem;
-        border-radius: 50%;
-        display: inline-flex;
-        background-color: #c4c4c4;
-        margin: 0.75rem;
-        box-shadow: 4px 4px 20px #333333;
-    }
-    div.howtofind {
-        text-align: center;
-    }
-
-    .howtofind > button:hover {
-        background-color: #eeeeee;
-    }
-
-    .howtofind button.active {
-        box-shadow: 4px 4px 10px #c4c4c4;
-        border: 1px solid #c4c4c4;
     }
 
     label {
         font-size: 2rem;
     }
     
-
 }
 
 
