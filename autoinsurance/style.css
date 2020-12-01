@@ -12,19 +12,53 @@ body {
     margin: 0px;
 }
 
+nav i {
+    background-color: inherit;
+    color: inherit;
+}
+
+nav {
+    display: grid;
+    grid: 1rem / 1fr 1fr 1fr 1fr;
+    column-gap: 0.25rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+
+
+nav>a, nav>div, div>a {
+    background-color: #333333;
+    box-shadow: 0px 4px 5px #333333;
+    color: #eeeeee;
+    z-index: 10;
+}
+
+nav>div, div>a {
+    display: grid;
+}
+
+a, .active {
+    text-align: center;
+}
+
+.active{
+    background-color: #6483C6;
+    box-shadow: 0px 4px 5px #6483C6;
+}
+
+
 blockquote {
     padding-left: 1rem;
     margin-left: 1.5rem;
     border-left: 3px solid#6483C6;
 }
-
-    
+  
 main > address{
     margin-top: 2rem;
 }
 
 footer {
-    /*font-size: 0.75rem;*/
     width: 100vw;
     position: fixed;
     bottom: 0rem;
@@ -45,13 +79,11 @@ footer > address a:hover {
     color: #333333;
 }
 
-a>span {
+span {
     display: none;
 }
 
 h1 {
-    
-    /*font-size: 2rem;*/
     margin: 1.5rem 0rem;
     text-align: center;
 }
@@ -60,26 +92,17 @@ img {
     width: 100%;
     display: block;
     margin: 1rem auto;
-    /*box-shadow: 8px 8px 20px #333333;*/
-    
 }
 
-a {
+a, nav div {
     text-align: center;
-}
-
-.active,
-button.active {
 }
 
 .active:hover {
     color: #333333;
 }
 
-
-
 nav>a:hover,
-button:hover,
 div>a:hover {
     color: #6483C6;
 }
@@ -100,14 +123,13 @@ aside>p {
     text-align: right;
 }
 
-
 .howtofind > button {
     width: 16px;
     height: 16px;
     border-radius: 50%;
     display: inline-flex;
     background-color: #c4c4c4;
-    margin: 0.75rem;
+    margin: 0.5rem;
     box-shadow: 4px 4px 10px #3333337e;
 }
 
@@ -124,7 +146,6 @@ div.howtofind {
     transform: translate(2px, 2px);
 }
 
-
 input, textarea {
     background-color: #c4c4c4;
 }
@@ -132,14 +153,13 @@ input, textarea {
 @media only screen and (min-width: 800px){
 
     h1 {
-        /*font-size: 4rem;*/
+
         margin: 6rem 0rem 4rem 0rem;
         text-align: center;
     }
 
-    blockquote, p, a, button, address {
-        /*font-size: 2rem;*/
-        line-height: 2em;
+    blockquote, p, a, nav div, span, address {
+        line-height: 2rem;
     }
 
     blockquote, p {
@@ -155,37 +175,41 @@ input, textarea {
         display: block;
         margin: 0rem auto 2rem auto;
         box-shadow: 8px 8px 20px #333333;
-        
+    }
+
+    i.fas {
+        display:none;
+    }
+
+    nav span {
+        display: grid;
+        color: inherit;
+        background-color: inherit;
     }
 
 
     nav {
-        display: grid;
         grid: 2rem / 1fr 1fr 1fr 1fr;
         column-gap: 1rem;
-        justify-content: space-between;
-        margin-bottom: 2rem;
-        
+        margin-bottom: 2rem;        
     }
-
-    nav>a, nav>div, button, div>a {
+/*
+    nav>a, nav>div, div>a {
         background-color: #333333;
         box-shadow: 0px 4px 5px #333333;
-        /*font-size: 2rem;*/
         color: #eeeeee;
         z-index: 10;
     }
 
-    nav>div, button, div>a {
+  nav>div, div>a {
         display: grid;
     }
 
-    a {
+    a, .active {
         text-align: center;
     }
 
-    .active,
-    button.active {
+    .active{
         background-color: #6483C6;
         box-shadow: 0px 4px 5px #6483C6;
     }
@@ -194,11 +218,10 @@ input, textarea {
     }
 
     nav>a:hover,
-    button:hover,
     div>a:hover {
         color: #6483C6;
     }
-
+*/
     div>div {
         display: none;
     }
@@ -256,10 +279,6 @@ input, textarea {
         height: 1.5rem;
     }
 
-    label {
-        /*font-size: 2rem;*/
-    }
-    
 }
 
 
