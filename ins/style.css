@@ -146,6 +146,11 @@ input, textarea {
     background-color: #c4c4c4;
 }
 
+article>p>span {
+    display: inline;
+    float: right;
+}
+
 @media only screen and (min-width: 800px){
 
 /*
