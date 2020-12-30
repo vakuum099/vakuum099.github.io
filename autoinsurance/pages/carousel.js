@@ -1,27 +1,27 @@
 "use strict"
 
 let images = [
-    ["../images/streetview1.jpg", "Салон шин Авто-Стиль з протилежного боку проспекту імені Героїв Сталінграду."], 
-    ["../images/streetview1edit_.jpg"],
-    ["../images/streetview2.jpg", "Салон шин Авто-Стиль з протилежного боку проспекту імені Героїв Сталінграду."], 
-    ["../images/streetview2edit_.jpg"],
-    ["../images/streetview4.jpg", "Салон шин Авто-Стиль з боку проспекту імені Героїв Сталінграду"],
-    ["../images/streetview4edit_.jpg"],
-    ["../images/streetview5.jpg", "Салон шин Авто-Стиль з тротуару"],
-    ["../images/streetview5edit_.jpg"],
-    ["../images/streetview8.jpg", "Офіс відділення МСК на Нових домах"],
-    ["../images/streetview8edit.jpg"],
-    ["../images/streetview9.jpg", "Офіс відділення МСК на Нових домах впритул"],
-    ["../images/streetview9edit_.jpg"]
+    ["../media/01.jpg", "Салон шин Авто-Стиль з протилежного боку проспекту імені Героїв Сталінграду."], 
+    ["../media/02.jpg", "Салон шин Авто-Стиль з протилежного боку проспекту імені Героїв Сталінграду."], 
+    ["../media/03.jpg", "Салон шин Авто-Стиль з боку проспекту імені Героїв Сталінграду"],
+    ["../media/04.jpg", "Салон шин Авто-Стиль з тротуару"],
+    ["../media/05.jpg", "Офіс відділення МСК на Нових домах"],
+    ["../media/06.jpg", "Офіс відділення МСК на Нових домах впритул"],
+    ["../media/07.jpg", "Салон шин Авто-Стиль з тротуару"],
+    ["../media/08.jpg", "Офіс відділення МСК на Нових домах"],
+    ["../media/09.jpg", "Офіс відділення МСК на Нових домах впритул"],
 ];
 
 let buttonToMap = {
     "button0": 0,
-    "button1": 2,
-    "button2": 4,
-    "button3": 6,
-    "button4": 8,
-    "button5": 10
+    "button1": 1,
+    "button2": 2,
+    "button3": 3,
+    "button4": 4,
+    "button5": 5,
+    "button6": 6,
+    "button7": 7,
+    "button8": 8
 };
 
 let currentPicture = 0;
@@ -31,7 +31,7 @@ let carousel = setInterval(nextPicture, 2000);
 
 
 window.addEventListener('load', () => {
-    picture = document.querySelector("img");
+    picture = document.querySelector("img.photo");
     pictureButtons = document.querySelectorAll(".howtofind > button");
     pictureButtons.forEach(el => el.addEventListener('click', handleClick, false));
     changePicture(0);
@@ -51,8 +51,6 @@ function changePicture (i) {
     picture.src = images[i][0];
     picture.alt = images[i][1];
     pictureButtons.forEach(el => el.className = null);
-    pictureButtons[i/2].className = "press";
-    setTimeout( () =>picture.src = images[i+1][0], 500)
 }
 
 function handleClick(e) {
@@ -66,3 +64,4 @@ function handleClick(e) {
     changePicture(targetIndex);
     currentPicture = targetIndex;
 }
+

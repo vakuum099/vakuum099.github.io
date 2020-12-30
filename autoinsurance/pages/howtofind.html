@@ -17,53 +17,67 @@
     <title>Де застрахуватися у Харкові</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../stylehtf.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4PTs3nX5qMt_gacjgzmse5y3pmYZqEZU&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
 </head>
 <body>
     <nav>
         <a href=../index.html><i class="fas fa-home"></i> <span>Головна</span></a>
         <div class="dropdown"><i class="fas fa-folder-open"></i><span>Страхування</span>
             <div class="dropdown-content">
-              <a href="./osago.html">ОСАГО</a>
+              <a href="./avtocyvilka.html">АВТОЦИВІЛКА</a>
               <a href="./kasko.html">КАСКО</a>
-              <a href="./zelena-karta.html">ЗЕЛЕНА КАРТА</a>
+              <a href="./zelena-kartka.html">ЗЕЛЕНА КАРТRА</a>
               <a href="./strahuvannya-inshe.html">СТРАХУВАННЯ ІНШЕ</a>
             </div>
         </div> 
         <a class="active" href="#"><i class="fas fa-shoe-prints"></i><span> Як нас знайти</span></a>
+        <a href="./forum.html"><i class="fas fa-question"></i><span>Висловіть свою думку</span></a>
         <a href="./zapytaty.html"><i class="fas fa-question"></i><span>Запитати</span></a>
 
     </nav>
-    <main>
-        <article>
-            <h1>Як нас знайти</h1>
-            <img src="../images/streetview1.jpg" alt="">
-            <div class="howtofind">
-                <button id="button0" type="button" class="press"></button>
-                <button id="button1" type="button" ></button>
-                <button id="button2" type="button" ></button>
-                <button id="button3" type="button" ></button>
-                <button id="button4" type="button" ></button>
-                <button id="button5" type="button" ></button>
-            </div>
-
-        </article>
+    <main >
+        <div class="flex">
+            <address class="left">
+                <p>Наша адреса:</p>
+                <p>проспект Героїв Сталінграду 169/1, м. Харків, Україна.</p>
+                <img src="../media/map.jpg" alt="">
+            </address>
+            <article class ="right">
+                <h1>Як нас знайти</h1>
+                <img class="photo" src="../media/01.jpg" alt="">
+                <div class="howtofind">
+                    <button id="button0" type="button" class="press"></button>
+                    <button id="button1" type="button" ></button>
+                    <button id="button2" type="button" ></button>
+                    <button id="button3" type="button" ></button>
+                    <button id="button4" type="button" ></button>
+                    <button id="button5" type="button" ></button>
+                    <button id="button6" type="button" ></button>
+                    <button id="button7" type="button" ></button>
+                    <button id="button8" type="button" ></button>
+                </div>
+            </article>
+        </div>
 
         <address>
-            <p>Наша адреса:</p>
-            <p>проспект Героїв Сталінграду 169/1, м. Харків, Україна.</p>
-            
+            Ваш страховий агент Вакуленко Анатолій Васильович, <a href="tel:+380993005464" >телефон</a>: (099)300-54-64;
+            <br>
+            <a href="viber://chat/?number=%2B380993005464" >Вайбер</a>, <a href="https://api.whatsapp.com/send?phone=+380993005464" target="_blank" >Вацап</a>, <a href="https://telegram.im/@+380993005464" target="_blank">Телеграм</a>: (099)300-54-64;
         </address>
     </main>
     <footer>
         <address>
-            <a href="tel:+380993005464" ><span>тел/вайбер: </span>(099)300-54-64</a>
-            <a href="mailto: vakulenko@odo-msk.com.ua"><span>e-mail: </span> vakulenko@odo-msk.com.ua</a>
+            <a href="mailto: vakulenko@odo-msk.com.ua">Електронна пошта</a>: vakulenko@odo-msk.com.ua
         </address>
     </footer>
-    <script src="carousel.js"></script>
-    <script src="https://unpkg.com/mailgo@0.11.1/dist/mailgo.min.js"></script>
+    <script src="./carousel.js"></script>
+
 </body>
 </html>
